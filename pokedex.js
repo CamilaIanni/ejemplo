@@ -62,3 +62,20 @@ function MostrarPokemon(ObjetoPokemon){
     });
 
 }
+
+let usuario = localStorage.getItem(`usuario`);
+//los datos almacenados en el LocalStorage se almacenan en el navegador de forma indefinida//
+//se accede a la informacion definida con el getItem//
+//parse: recibe un texto JSON como parametro y devuelve el objeto JS correspondiente//
+
+if( usuario == null){
+    usuario = prompt("por favor ingrese su nombre");
+    localStorage.setItem(`usuario`, usuario);
+    //los datos almacenados en el LocalStorage se almacenan en el navegador de forma indefinida//
+//para almacenar informacion se utiliza el SetItem//
+    
+}else{
+    alert(`Bienvenido nuevamente ` + usuario);
+}
+
+
