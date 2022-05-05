@@ -21,6 +21,10 @@ const insertPokemon = event =>{
           .then(response => MostrarPokemon(response))
           .catch(err => Cagamos())
 }
+ 
+$( document ).ajaxError(function(Cagamos) {
+    $( ".log" ).text( "Triggered ajaxError handler." );
+  });
 
 function Cagamos(){
     alert("Algo falló en el código....")
@@ -78,4 +82,11 @@ if( usuario == null){
     alert(`Bienvenido nuevamente ` + usuario);
 }
 
+const AddClassContact = event =>{
+    event.preventDefault();
+
+    var boton =$(".eventListener");
+    boton.addClass("");
+
+}
 
