@@ -90,3 +90,8 @@ const AddClassContact = event =>{
 
 }
 
+
+$( document ).ajaxError(function() {
+    $( ".pokename" ).text( "Triggered ajaxError handler." );
+  });
+
